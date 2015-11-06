@@ -91,6 +91,9 @@ public class SRHTTP: NSObject, NSURLSessionDelegate, NSURLSessionDataDelegate {
         // TODO
     }
     
+    // TODO: HTTP METHOD PUT
+    // TODO: HTTP METHOD DELETE
+    
     private func taskObject(task: NSURLSessionTask) -> SRHTTPTaskItem? {
         for item in self.taskItems {
             if item.task == task { return item }
