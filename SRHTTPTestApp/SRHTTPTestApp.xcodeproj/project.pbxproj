@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8AD116C01BEAF0E000E4A90D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD116BF1BEAF0E000E4A90D /* AppDelegate.swift */; };
+		8AD116C21BEAF0E000E4A90D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD116C11BEAF0E000E4A90D /* ViewController.swift */; };
+		8AD116C41BEAF0E000E4A90D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD116C31BEAF0E000E4A90D /* Assets.xcassets */; };
+		8AD116C71BEAF0E000E4A90D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AD116C51BEAF0E000E4A90D /* Main.storyboard */; };
+		8AD116D21BEAF0E000E4A90D /* SRHTTPTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD116D11BEAF0E000E4A90D /* SRHTTPTestAppTests.swift */; };
+		8AFEBE031BEB2A2400336A87 /* SRHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFEBE001BEB2A1C00336A87 /* SRHTTP.framework */; };
+		8AFEBE041BEB2A2400336A87 /* SRHTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFEBE001BEB2A1C00336A87 /* SRHTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8AFEBE691BEC4EA100336A87 /* SRJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFEBE681BEC4EA100336A87 /* SRJSON.framework */; };
+		8AFEBE6B1BEC4EA900336A87 /* SRJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFEBE681BEC4EA100336A87 /* SRJSON.framework */; };
+		8AFEBE6D1BEC4EB700336A87 /* SRJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8AFEBE681BEC4EA100336A87 /* SRJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8AD116CE1BEAF0E000E4A90D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AD116B41BEAF0E000E4A90D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AD116BB1BEAF0E000E4A90D;
+			remoteInfo = SRHTTPTestApp;
+		};
+		8AFEBDFF1BEB2A1C00336A87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AFEBDFA1BEB2A1C00336A87 /* SRHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8AD116A81BEAF09F00E4A90D;
+			remoteInfo = SRHTTP_OSX;
+		};
+		8AFEBE011BEB2A1C00336A87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AFEBDFA1BEB2A1C00336A87 /* SRHTTP.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8AD116EB1BEAF11C00E4A90D;
+			remoteInfo = SRHTTP_iOS;
+		};
+		8AFEBE051BEB2A2400336A87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8AFEBDFA1BEB2A1C00336A87 /* SRHTTP.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8AD116A71BEAF09F00E4A90D;
+			remoteInfo = SRHTTP_OSX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8AFEBE071BEB2A2400336A87 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8AFEBE041BEB2A2400336A87 /* SRHTTP.framework in Embed Frameworks */,
+				8AFEBE6D1BEC4EB700336A87 /* SRJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8AD116BC1BEAF0E000E4A90D /* SRHTTPTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SRHTTPTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD116BF1BEAF0E000E4A90D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8AD116C11BEAF0E000E4A90D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8AD116C31BEAF0E000E4A90D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8AD116C61BEAF0E000E4A90D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8AD116C81BEAF0E000E4A90D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AD116CD1BEAF0E000E4A90D /* SRHTTPTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SRHTTPTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD116D11BEAF0E000E4A90D /* SRHTTPTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRHTTPTestAppTests.swift; sourceTree = "<group>"; };
+		8AD116D31BEAF0E000E4A90D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8AFEBDFA1BEB2A1C00336A87 /* SRHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SRHTTP.xcodeproj; path = ../SRHTTP.xcodeproj; sourceTree = "<group>"; };
+		8AFEBE681BEC4EA100336A87 /* SRJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SRJSON.framework; path = Carthage/Build/Mac/SRJSON.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8AD116B91BEAF0E000E4A90D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AFEBE031BEB2A2400336A87 /* SRHTTP.framework in Frameworks */,
+				8AFEBE691BEC4EA100336A87 /* SRJSON.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AD116CA1BEAF0E000E4A90D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AFEBE6B1BEC4EA900336A87 /* SRJSON.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8AD116B31BEAF0E000E4A90D = {
+			isa = PBXGroup;
+			children = (
+				8AFEBE681BEC4EA100336A87 /* SRJSON.framework */,
+				8AFEBDFA1BEB2A1C00336A87 /* SRHTTP.xcodeproj */,
+				8AD116BE1BEAF0E000E4A90D /* SRHTTPTestApp */,
+				8AD116D01BEAF0E000E4A90D /* SRHTTPTestAppTests */,
+				8AD116BD1BEAF0E000E4A90D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8AD116BD1BEAF0E000E4A90D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AD116BC1BEAF0E000E4A90D /* SRHTTPTestApp.app */,
+				8AD116CD1BEAF0E000E4A90D /* SRHTTPTestAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8AD116BE1BEAF0E000E4A90D /* SRHTTPTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				8AD116BF1BEAF0E000E4A90D /* AppDelegate.swift */,
+				8AD116C11BEAF0E000E4A90D /* ViewController.swift */,
+				8AD116C31BEAF0E000E4A90D /* Assets.xcassets */,
+				8AD116C51BEAF0E000E4A90D /* Main.storyboard */,
+				8AD116C81BEAF0E000E4A90D /* Info.plist */,
+			);
+			path = SRHTTPTestApp;
+			sourceTree = "<group>";
+		};
+		8AD116D01BEAF0E000E4A90D /* SRHTTPTestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				8AD116D11BEAF0E000E4A90D /* SRHTTPTestAppTests.swift */,
+				8AD116D31BEAF0E000E4A90D /* Info.plist */,
+			);
+			path = SRHTTPTestAppTests;
+			sourceTree = "<group>";
+		};
+		8AFEBDFB1BEB2A1C00336A87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8AFEBE001BEB2A1C00336A87 /* SRHTTP.framework */,
+				8AFEBE021BEB2A1C00336A87 /* SRHTTP.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8AD116BB1BEAF0E000E4A90D /* SRHTTPTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AD116D61BEAF0E000E4A90D /* Build configuration list for PBXNativeTarget "SRHTTPTestApp" */;
+			buildPhases = (
+				8AD116B81BEAF0E000E4A90D /* Sources */,
+				8AD116B91BEAF0E000E4A90D /* Frameworks */,
+				8AD116BA1BEAF0E000E4A90D /* Resources */,
+				8AFEBE071BEB2A2400336A87 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AFEBE061BEB2A2400336A87 /* PBXTargetDependency */,
+			);
+			name = SRHTTPTestApp;
+			productName = SRHTTPTestApp;
+			productReference = 8AD116BC1BEAF0E000E4A90D /* SRHTTPTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8AD116CC1BEAF0E000E4A90D /* SRHTTPTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8AD116D91BEAF0E000E4A90D /* Build configuration list for PBXNativeTarget "SRHTTPTestAppTests" */;
+			buildPhases = (
+				8AD116C91BEAF0E000E4A90D /* Sources */,
+				8AD116CA1BEAF0E000E4A90D /* Frameworks */,
+				8AD116CB1BEAF0E000E4A90D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AD116CF1BEAF0E000E4A90D /* PBXTargetDependency */,
+			);
+			name = SRHTTPTestAppTests;
+			productName = SRHTTPTestAppTests;
+			productReference = 8AD116CD1BEAF0E000E4A90D /* SRHTTPTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8AD116B41BEAF0E000E4A90D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Seorenn;
+				TargetAttributes = {
+					8AD116BB1BEAF0E000E4A90D = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					8AD116CC1BEAF0E000E4A90D = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 8AD116BB1BEAF0E000E4A90D;
+					};
+				};
+			};
+			buildConfigurationList = 8AD116B71BEAF0E000E4A90D /* Build configuration list for PBXProject "SRHTTPTestApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8AD116B31BEAF0E000E4A90D;
+			productRefGroup = 8AD116BD1BEAF0E000E4A90D /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8AFEBDFB1BEB2A1C00336A87 /* Products */;
+					ProjectRef = 8AFEBDFA1BEB2A1C00336A87 /* SRHTTP.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8AD116BB1BEAF0E000E4A90D /* SRHTTPTestApp */,
+				8AD116CC1BEAF0E000E4A90D /* SRHTTPTestAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8AFEBE001BEB2A1C00336A87 /* SRHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SRHTTP.framework;
+			remoteRef = 8AFEBDFF1BEB2A1C00336A87 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8AFEBE021BEB2A1C00336A87 /* SRHTTP.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SRHTTP.framework;
+			remoteRef = 8AFEBE011BEB2A1C00336A87 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8AD116BA1BEAF0E000E4A90D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD116C41BEAF0E000E4A90D /* Assets.xcassets in Resources */,
+				8AD116C71BEAF0E000E4A90D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AD116CB1BEAF0E000E4A90D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8AD116B81BEAF0E000E4A90D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD116C21BEAF0E000E4A90D /* ViewController.swift in Sources */,
+				8AD116C01BEAF0E000E4A90D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AD116C91BEAF0E000E4A90D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD116D21BEAF0E000E4A90D /* SRHTTPTestAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8AD116CF1BEAF0E000E4A90D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8AD116BB1BEAF0E000E4A90D /* SRHTTPTestApp */;
+			targetProxy = 8AD116CE1BEAF0E000E4A90D /* PBXContainerItemProxy */;
+		};
+		8AFEBE061BEB2A2400336A87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SRHTTP_OSX;
+			targetProxy = 8AFEBE051BEB2A2400336A87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8AD116C51BEAF0E000E4A90D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8AD116C61BEAF0E000E4A90D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8AD116D41BEAF0E000E4A90D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8AD116D51BEAF0E000E4A90D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8AD116D71BEAF0E000E4A90D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = SRHTTPTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.seorenn.SRHTTPTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8AD116D81BEAF0E000E4A90D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = SRHTTPTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.seorenn.SRHTTPTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8AD116DA1BEAF0E000E4A90D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = SRHTTPTestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.seorenn.SRHTTPTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SRHTTPTestApp.app/Contents/MacOS/SRHTTPTestApp";
+			};
+			name = Debug;
+		};
+		8AD116DB1BEAF0E000E4A90D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = SRHTTPTestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.seorenn.SRHTTPTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SRHTTPTestApp.app/Contents/MacOS/SRHTTPTestApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8AD116B71BEAF0E000E4A90D /* Build configuration list for PBXProject "SRHTTPTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD116D41BEAF0E000E4A90D /* Debug */,
+				8AD116D51BEAF0E000E4A90D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AD116D61BEAF0E000E4A90D /* Build configuration list for PBXNativeTarget "SRHTTPTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD116D71BEAF0E000E4A90D /* Debug */,
+				8AD116D81BEAF0E000E4A90D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AD116D91BEAF0E000E4A90D /* Build configuration list for PBXNativeTarget "SRHTTPTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8AD116DA1BEAF0E000E4A90D /* Debug */,
+				8AD116DB1BEAF0E000E4A90D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8AD116B41BEAF0E000E4A90D /* Project object */;
+}
