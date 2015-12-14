@@ -66,4 +66,41 @@ class SRHTTPTestAppTests: XCTestCase {
             }
         }
     }
+    
+    func testSimplePost() {
+        let expectation = expectationWithDescription("POST /post")
+        let http = SRHTTP()
+        let target = "http://httpbin.org/post"
+        let params: [String: AnyObject] = [ "name": "foo", "age": 27 ]
+
+        http.post(target, parameters: params, data: nil) {
+            (response, error) in
+            
+            XCTAssertNotNil(response)
+            XCTAssertNil(error)
+            XCTAssertEqual(response!.statusCode, 200)
+            
+            print("Reponses: \(response!.text!)")
+            
+//            if let data = response?.data {
+//                if let json = SRJSON(data: data) {
+//                    XCTAssertEqual(json["url"]!.stringValue!, target)
+//                } else {
+//                    XCTFail()
+//                }
+//            } else {
+//                XCTFail()
+//            }
+            
+            expectation.fulfill()
+        }
+        
+        waitForExpectationsWithTimeout(5) {
+            error in
+            if let error = error {
+                print("Error: \(error)")
+            }
+        }
+
+    }
 }

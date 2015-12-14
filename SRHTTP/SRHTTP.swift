@@ -22,6 +22,13 @@ private class SRHTTPTaskItem {
     }
 }
 
+private enum SRHTTPMethod: String {
+    case Get = "GET"
+    case Post = "POST"
+    case Put = "PUT"
+    case Delete = "DELETE"
+}
+
 public class SRHTTP: NSObject, NSURLSessionDelegate, NSURLSessionDataDelegate {
     
     private lazy var session: NSURLSession = {
@@ -87,12 +94,54 @@ public class SRHTTP: NSObject, NSURLSessionDelegate, NSURLSessionDataDelegate {
         task.resume()
     }
     
-    public func post(URLString: String, parameters: [String: AnyObject]?, fileURLs: [NSURL]?, responseHandler: SRHTTPResponseBlock) {
-        // TODO
+    public func post(URLString: String, parameters: [String: AnyObject]?, fileURL: NSURL?, responseHandler: SRHTTPResponseBlock) {
+        self.postableRequest(method: .Post, URLString: URLString, parameters: parameters, data: nil, fileURL: fileURL, responseHandler: responseHandler)
     }
-    
+
+    public func post(URLString: String, parameters: [String: AnyObject]?, data: NSData?, responseHandler: SRHTTPResponseBlock) {
+        self.postableRequest(method: .Post, URLString: URLString, parameters: parameters, data: data, fileURL: nil, responseHandler: responseHandler)
+    }
+
     // TODO: HTTP METHOD PUT
     // TODO: HTTP METHOD DELETE
+    
+    private func postableRequest(method method: SRHTTPMethod, URLString: String, parameters: [String: AnyObject]?, data: NSData?, fileURL: NSURL?, responseHandler: SRHTTPResponseBlock) {
+
+        guard let request = self.generateRequest(method: method, URLString: URLString, parameters: parameters) else {
+            print("ERROR: Failed to generate request")
+            return
+        }
+        
+        let task: NSURLSessionTask
+        if let data = data {
+            task = self.session.uploadTaskWithRequest(request, fromData: data)
+        } else if let fileURL = fileURL {
+            task = self.session.uploadTaskWithRequest(request, fromFile: fileURL)
+        } else {
+            task = self.session.dataTaskWithRequest(request)
+        }
+
+        let response = SRHTTPResponse(task: task)
+        let taskItem = SRHTTPTaskItem(task: task, response: response, completionHandler: responseHandler)
+        self.taskItems.append(taskItem)
+        
+        task.resume()
+    }
+    
+    private func generateRequest(method method: SRHTTPMethod, URLString: String, parameters: [String: AnyObject]?) -> NSMutableURLRequest? {
+        guard let url = NSURL(string: URLString) else {
+            print("ERROR: Failed to get URL from the string '\(URLString)'")
+            return nil
+        }
+        
+        let request = NSMutableURLRequest(URL: url)
+        request.allowsCellularAccess = self.session.configuration.allowsCellularAccess
+        request.HTTPMethod = method.rawValue
+        
+        // TODO: Make Parameters to request
+        
+        return request
+    }
     
     private func taskObject(task: NSURLSessionTask) -> SRHTTPTaskItem? {
         for item in self.taskItems {
