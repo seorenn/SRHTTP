@@ -73,7 +73,7 @@ class SRHTTPTestAppTests: XCTestCase {
         let target = "http://httpbin.org/post"
         let params: [String: AnyObject] = [ "name": "foo", "age": 27 ]
 
-        http.post(target, parameters: params, data: nil) {
+        http.post(target, parameters: params) {
             (response, error) in
             
             XCTAssertNotNil(response)
@@ -81,17 +81,28 @@ class SRHTTPTestAppTests: XCTestCase {
             XCTAssertEqual(response!.statusCode, 200)
             
             print("Reponses: \(response!.text!)")
+
+            guard let data = response?.data else {
+                XCTFail()
+                return
+            }
             
-//            if let data = response?.data {
-//                if let json = SRJSON(data: data) {
-//                    XCTAssertEqual(json["url"]!.stringValue!, target)
-//                } else {
-//                    XCTFail()
-//                }
-//            } else {
-//                XCTFail()
-//            }
+            guard let json = SRJSON(data: data) else {
+                XCTFail()
+                return
+            }
             
+            XCTAssertEqual(json["url"]!.stringValue!, "http://httpbin.org/post")
+            
+            guard let form = json["form"] else {
+                XCTFail()
+                return
+            }
+            
+            XCTAssertEqual(form["name"]!.stringValue!, "foo")
+            XCTAssertEqual(form["age"]!.intValue!, 27)
+            
+            // TODO: Implement more cases            
             expectation.fulfill()
         }
         
