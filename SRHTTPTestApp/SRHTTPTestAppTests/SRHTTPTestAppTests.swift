@@ -112,6 +112,33 @@ class SRHTTPTestAppTests: XCTestCase {
                 print("Error: \(error)")
             }
         }
-
+    }
+    
+    func testPostWithData() {
+        let expectation = expectationWithDescription("POST /post-data")
+        let http = SRHTTP()
+        let target = "http://httpbin.org/post"
+        let params: [String: AnyObject] = [ "name": "foo", "age": 27 ]
+        
+        let data = "This is test data".dataUsingEncoding(NSUTF8StringEncoding)
+        http.post(target, parameters: params, data: data) {
+            (response, error) in
+            
+            XCTAssertNotNil(response)
+            XCTAssertNil(error)
+            XCTAssertEqual(response!.statusCode, 200)
+            
+            print("Reponses: \(response!.text!)")
+            
+            // TODO: Implement more cases
+            expectation.fulfill()
+        }
+        
+        waitForExpectationsWithTimeout(5) {
+            error in
+            if let error = error {
+                print("Error: \(error)")
+            }
+        }
     }
 }
